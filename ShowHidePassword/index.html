@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Hide Password</title>
+    <script
+      src="https://kit.fontawesome.com/343cbc6146.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="inputBox">
+      <input type="password" placeholder="Digite sua senha" id="password" />
+      <div onclick="showHide()" class="toggle">
+        <i class="far fa-eye"></i>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const show = document.querySelector(".far");
+
+  function showHide() {
+    if (password.type === "password") {
+      password.setAttribute("type", "text");
+      show.classList.remove("fa-eye");
+      show.classList.add("fa-eye-slash");
+    } else {
+      password.setAttribute("type", "password");
+      show.classList.remove("fa-eye-slash");
+      show.classList.add("fa-eye");
+    }
+  }
+</script>
